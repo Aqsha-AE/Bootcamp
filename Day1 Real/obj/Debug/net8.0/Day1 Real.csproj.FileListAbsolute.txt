@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\bin\Debug\net8.0\Day1 Real.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\bin\Debug\net8.0\Day1 Real.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\bin\Debug\net8.0\Day1 Real.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\bin\Debug\net8.0\Day1 Real.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\bin\Debug\net8.0\Day1 Real.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\refint\Day1 Real.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\Day1 Real.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day1 Real\obj\Debug\net8.0\ref\Day1 Real.dll

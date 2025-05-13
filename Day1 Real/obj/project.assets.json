@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day3\\Day3.csproj",
-      "projectName": "Day3",
-      "projectPath": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day3\\Day3.csproj",
+      "projectUniqueName": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day1 Real\\Day1 Real.csproj",
+      "projectName": "Day1 Real",
+      "projectPath": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day1 Real\\Day1 Real.csproj",
       "packagesPath": "C:\\Users\\Aqsha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day3\\obj\\",
+      "outputPath": "C:\\Users\\Aqsha\\Documents\\Bootcamp\\Day1 Real\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aqsha\\AppData\\Roaming\\NuGet\\NuGet.Config"
