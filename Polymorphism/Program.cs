@@ -1,4 +1,6 @@
 ﻿using fungsi; 
+
+
 class Program{
     static void Main () 
     {

@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\bin\Debug\net8.0\Abstration.exe
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\bin\Debug\net8.0\Abstration.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\bin\Debug\net8.0\Abstration.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\bin\Debug\net8.0\Abstration.dll
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\bin\Debug\net8.0\Abstration.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.dll
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\refint\Abstration.dll
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\Abstration.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Abstration\obj\Debug\net8.0\ref\Abstration.dll

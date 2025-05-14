@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Perpustakaan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8163571a0914b9215e7065c0d9987d0a4112d9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e81766cbfd275b974baeb41e1f41c004aec8a80")]
 [assembly: System.Reflection.AssemblyProductAttribute("Perpustakaan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Perpustakaan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

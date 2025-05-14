@@ -1,28 +1,17 @@
-﻿using buku; 
+﻿using koleksi; 
+using member;
 
 namespace MyProject;
 class Program
 {
-    static void Main(string[] args)
+    static void Main(string[] args) 
     {
-        string name = Console.ReadLine();
-        Console.Write("berapa umurnya ?"); 
-        string colour = int.Parse(Console.ReadLine()); 
-        Ipa biologi = new Ipa(); 
-    }
-}
+        Book buku1 = new Book("Harry Potter", "J.K. Rowling", "Biru");
+        buku1.InfoBuku();
 
-public class Ipa
-{
-    public string name; 
-    public string colour; 
-    public Ipa (string Name, string Colour)
-    {
-        name = Name; 
-        colour = Colour;
+        Pengunjung pengunjung1 = new Pengunjung("John Doe", "M001");
+        pengunjung1.InfoPengunjung();
+
+        Console.WriteLine("Selamat datang di Perpustakaan!");
     }
-    public void Read()
-	{
-		Console.WriteLine($" buku {name} dengan warna {colour} dibaca");
-	}
 }

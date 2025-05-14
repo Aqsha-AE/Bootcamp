@@ -1,6 +1,7 @@
 namespace fungsi; 
 class Kalkulator 
 {
+// termasuk method overloading
 public int tambah (int a, int b) 
 {
     return a+b; 

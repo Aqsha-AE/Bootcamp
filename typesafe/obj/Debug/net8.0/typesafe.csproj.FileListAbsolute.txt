@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\bin\Debug\net8.0\typesafe.exe
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\bin\Debug\net8.0\typesafe.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\bin\Debug\net8.0\typesafe.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\bin\Debug\net8.0\typesafe.dll
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\bin\Debug\net8.0\typesafe.pdb
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.dll
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\refint\typesafe.dll
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.pdb
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\typesafe.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\typesafe\obj\Debug\net8.0\ref\typesafe.dll
