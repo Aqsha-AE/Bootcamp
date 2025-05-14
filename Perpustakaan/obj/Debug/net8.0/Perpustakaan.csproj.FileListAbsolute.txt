@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\bin\Debug\net8.0\Perpustakaan.exe
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\bin\Debug\net8.0\Perpustakaan.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\bin\Debug\net8.0\Perpustakaan.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\bin\Debug\net8.0\Perpustakaan.dll
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\bin\Debug\net8.0\Perpustakaan.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.dll
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\refint\Perpustakaan.dll
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\Perpustakaan.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Perpustakaan\obj\Debug\net8.0\ref\Perpustakaan.dll

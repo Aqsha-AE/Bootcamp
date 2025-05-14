@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1 Real", "Day1 Real\Day1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1_Real", "Day1_Real\Day1_Real.csproj", "{A02621E3-D24A-4DAE-832C-6A029C6CCE40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perpustakaan", "Perpustakaan\Perpustakaan.csproj", "{543B816B-23B5-43C7-AE3F-1212C7389A2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{866AC193-3F28-495D-A613-80A8247E1585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +52,13 @@ Global
 		{A02621E3-D24A-4DAE-832C-6A029C6CCE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A02621E3-D24A-4DAE-832C-6A029C6CCE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A02621E3-D24A-4DAE-832C-6A029C6CCE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543B816B-23B5-43C7-AE3F-1212C7389A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543B816B-23B5-43C7-AE3F-1212C7389A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543B816B-23B5-43C7-AE3F-1212C7389A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543B816B-23B5-43C7-AE3F-1212C7389A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866AC193-3F28-495D-A613-80A8247E1585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866AC193-3F28-495D-A613-80A8247E1585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866AC193-3F28-495D-A613-80A8247E1585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866AC193-3F28-495D-A613-80A8247E1585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
