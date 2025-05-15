@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\bin\Debug\net8.0\Clasess.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\bin\Debug\net8.0\Clasess.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\bin\Debug\net8.0\Clasess.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\bin\Debug\net8.0\Clasess.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\bin\Debug\net8.0\Clasess.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\refint\Clasess.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\Clasess.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day3\Clasess\obj\Debug\net8.0\ref\Clasess.dll
