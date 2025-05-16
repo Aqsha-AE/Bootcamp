@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\bin\Debug\net8.0\testing.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\bin\Debug\net8.0\testing.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\bin\Debug\net8.0\testing.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\bin\Debug\net8.0\testing.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\bin\Debug\net8.0\testing.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\refint\testing.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\testing.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day4\testing\obj\Debug\net8.0\ref\testing.dll
