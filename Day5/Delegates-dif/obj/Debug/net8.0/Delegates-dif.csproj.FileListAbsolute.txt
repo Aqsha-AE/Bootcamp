@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\bin\Debug\net8.0\Delegates-dif.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\bin\Debug\net8.0\Delegates-dif.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\bin\Debug\net8.0\Delegates-dif.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\bin\Debug\net8.0\Delegates-dif.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\bin\Debug\net8.0\Delegates-dif.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\refint\Delegates-dif.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\Delegates-dif.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\Delegates-dif\obj\Debug\net8.0\ref\Delegates-dif.dll

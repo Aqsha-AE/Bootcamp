@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstration", "Abstration\Ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "typesafe", "typesafe\typesafe.csproj", "{47270450-CEB8-40A7-8798-E98076F9EB77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method", "Method\Method.csproj", "{335C0BB3-FE91-4C61-B322-89E3D632110E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{47270450-CEB8-40A7-8798-E98076F9EB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47270450-CEB8-40A7-8798-E98076F9EB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47270450-CEB8-40A7-8798-E98076F9EB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335C0BB3-FE91-4C61-B322-89E3D632110E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335C0BB3-FE91-4C61-B322-89E3D632110E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335C0BB3-FE91-4C61-B322-89E3D632110E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335C0BB3-FE91-4C61-B322-89E3D632110E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

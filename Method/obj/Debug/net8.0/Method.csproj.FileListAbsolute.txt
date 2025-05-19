@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Method\bin\Debug\net8.0\Method.exe
+C:\Users\Aqsha\Documents\Bootcamp\Method\bin\Debug\net8.0\Method.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Method\bin\Debug\net8.0\Method.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Method\bin\Debug\net8.0\Method.dll
+C:\Users\Aqsha\Documents\Bootcamp\Method\bin\Debug\net8.0\Method.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.dll
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\refint\Method.dll
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\Method.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Method\obj\Debug\net8.0\ref\Method.dll
