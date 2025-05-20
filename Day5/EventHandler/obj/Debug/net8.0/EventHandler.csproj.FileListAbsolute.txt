@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\bin\Debug\net8.0\EventHandler.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\bin\Debug\net8.0\EventHandler.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\bin\Debug\net8.0\EventHandler.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\bin\Debug\net8.0\EventHandler.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\bin\Debug\net8.0\EventHandler.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\refint\EventHandler.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\EventHandler.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\EventHandler\obj\Debug\net8.0\ref\EventHandler.dll

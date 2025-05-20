@@ -1,0 +1,15 @@
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\bin\Debug\net8.0\MulticastDelegate.exe
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\bin\Debug\net8.0\MulticastDelegate.deps.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\bin\Debug\net8.0\MulticastDelegate.runtimeconfig.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\bin\Debug\net8.0\MulticastDelegate.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\bin\Debug\net8.0\MulticastDelegate.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.AssemblyInfoInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.AssemblyInfo.cs
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.sourcelink.json
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\refint\MulticastDelegate.dll
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.pdb
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\MulticastDelegate.genruntimeconfig.cache
+C:\Users\Aqsha\Documents\Bootcamp\Day5\MulticastDelegate\obj\Debug\net8.0\ref\MulticastDelegate.dll
