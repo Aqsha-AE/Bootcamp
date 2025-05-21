@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\bin\Debug\net8.0\Logicex2.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\bin\Debug\net8.0\Logicex2.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\bin\Debug\net8.0\Logicex2.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\bin\Debug\net8.0\Logicex2.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\bin\Debug\net8.0\Logicex2.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\refint\Logicex2.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\Logicex2.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex2\Logicex2\obj\Debug\net8.0\ref\Logicex2.dll
