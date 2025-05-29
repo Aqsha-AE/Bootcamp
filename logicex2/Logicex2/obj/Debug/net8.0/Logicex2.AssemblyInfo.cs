@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Logicex2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1cfbc1a7e8c8178d3c6be52382ef342f801aeab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9cef8547b4b3243754d6605ff7a384c088b57c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Logicex2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Logicex2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
