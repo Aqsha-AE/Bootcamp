@@ -1,4 +1,4 @@
-namespace Scrabble.Enums;
+namespace ScrabbleGame.Enums;
 
 public enum Status
 {
