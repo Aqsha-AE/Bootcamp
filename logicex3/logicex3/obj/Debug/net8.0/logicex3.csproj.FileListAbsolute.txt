@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\bin\Debug\net8.0\logicex3.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\bin\Debug\net8.0\logicex3.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\bin\Debug\net8.0\logicex3.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\bin\Debug\net8.0\logicex3.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\bin\Debug\net8.0\logicex3.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\refint\logicex3.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\logicex3.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex3\logicex3\obj\Debug\net8.0\ref\logicex3.dll

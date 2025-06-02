@@ -16,5 +16,4 @@ graph TD
     
     C --> L[Finalizer]
     L --> M[Backup cleanup oleh GC]
-``` 
-
+```

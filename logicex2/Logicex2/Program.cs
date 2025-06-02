@@ -1,5 +1,4 @@
-﻿﻿using System;
-
+﻿﻿
 class Latihan
 {
     static void Main()
