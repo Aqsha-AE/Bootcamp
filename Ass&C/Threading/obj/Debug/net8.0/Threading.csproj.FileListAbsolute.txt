@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\bin\Debug\net8.0\Threading.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\bin\Debug\net8.0\Threading.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\bin\Debug\net8.0\Threading.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\bin\Debug\net8.0\Threading.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\bin\Debug\net8.0\Threading.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\refint\Threading.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\Threading.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Ass&C\Threading\obj\Debug\net8.0\ref\Threading.dll
