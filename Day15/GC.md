@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Resource Management] --> B[Garbage Collection]
     A --> C[IDisposable/Dispose]
@@ -15,3 +16,5 @@ graph TD
     
     C --> L[Finalizer]
     L --> M[Backup cleanup oleh GC]
+``` 
+
