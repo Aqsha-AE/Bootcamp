@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\bin\Debug\net8.0\logicfinal.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\bin\Debug\net8.0\logicfinal.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\bin\Debug\net8.0\logicfinal.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\bin\Debug\net8.0\logicfinal.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\bin\Debug\net8.0\logicfinal.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\refint\logicfinal.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\logicfinal.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\logicex4\logicfinal\obj\Debug\net8.0\ref\logicfinal.dll
