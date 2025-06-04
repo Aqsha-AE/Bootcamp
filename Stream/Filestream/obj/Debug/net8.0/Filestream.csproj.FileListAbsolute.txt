@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\bin\Debug\net8.0\Filestream.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\bin\Debug\net8.0\Filestream.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\bin\Debug\net8.0\Filestream.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\bin\Debug\net8.0\Filestream.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\bin\Debug\net8.0\Filestream.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\refint\Filestream.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\Filestream.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Stream\Filestream\obj\Debug\net8.0\ref\Filestream.dll
