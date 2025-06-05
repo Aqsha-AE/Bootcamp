@@ -13,65 +13,42 @@ public class Program
         IBoard board = new Board();
         ITileBag tileBag = new TileBag();
         IDictionary wordDictionary = new Dictionary();
-        List<IPlayer> player = new List<IPlayer>
-        {
-            new Player("Player 1"),
-            new Player("Player 2"),
-            new Player("Player 3"),
-            new Player("Player 4")
-        };
-        
+        List<IPlayer> player = new List<IPlayer>();
+
         Func<string, bool> validateWord = word => wordDictionary.isValidWord(word);
         Action<IPlayer> turnChanged = p => Console.WriteLine($"It's now {p.GetName()}'s turn.");
 
         Controller game = new Controller(board, display, player, tileBag, wordDictionary, validateWord, turnChanged);
-        game.StartGame(); 
+        game.StartGame();
 
-        // Setelah gameController.StartGame();
-        foreach (var p in player)
+        // Main game loop
+        while (game.GetStatus() == Status.GameStart)
         {
-            List<Tile> drawnTiles = game.DrawTiles(7); // Setiap pemain menarik 7 ubin di awal
-            p.GetTiles().AddRange(drawnTiles);
-            display.SetMessage($"{p.GetName()} menarik {drawnTiles.Count} ubin.");
-        }
+            display.DiplayBoard(game);
+            System.Console.WriteLine();
 
-        // Contoh pertukaran ubin untuk semua pemain (bisa disesuaikan dengan kondisi permainan)
-        foreach (var p in player)
-        {
-            if (p.GetTiles().Count > 0)
+            // Show each player's tiles at the start of the turn
+            foreach (var p in player)
             {
-                List<Tile> tilesToSwitch = new List<Tile> { p.GetTiles()[0] }; // Misalnya ubin pertama ditukar
-                game.SwitchTile(p, tilesToSwitch);
+                display.SetMessage($"{p.GetName()} tiles: " + string.Join(", ", p.GetTiles().Select(t => t.letter)));
             }
-        }
-                
-        display.DiplayBoard(game);
-        /*
-        Dictionary tes = new Dictionary();
-        tes.ReadFile("Perpustakaan.txt");
-        System.Console.WriteLine("Masukan kata : ");
-        string de = Console.ReadLine();
-        if (tes.isValidWord(de))
-        {
-            System.Console.WriteLine("validd dah");
-        }
-        else
-        {
-            System.Console.WriteLine("salah kata");
-        }
-        
 
-        //var Board = new Board();
-        // Board.DisplayB();
+            display.SetMessage("Choose an action:");
+            display.SetMessage("1. Place a word");
+            display.SetMessage("2. Pass Turn");
+            display.SetMessage("3. Shuffle Rack");
+            display.SetMessage("4. Switch Tiles");
+            display.SetMessage("5. End Game");
 
+            // Read user input and process action
+            string input = Console.ReadLine();
+            if (input == "5")
+            {
+                display.SetMessage("Game ended by user.");
+                break; // Exit the loop
+            }
 
-        
-                                                                                                                // Contoh menampilkan nama pemain
-                                                                                                                Console.WriteLine("Players:");
-                                                                                                                foreach (var player in player)
-                                                                                                                {
-                                                                                                                    Console.WriteLine(player.GetName()); // Pastikan IPlayer punya property Name
-                                                                                                                }
-                                                                                                        */
+            // TODO: Implement other actions based on input
+        }
     }
 }

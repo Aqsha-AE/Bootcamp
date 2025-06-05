@@ -2,8 +2,8 @@ namespace ScrabbleGame.Models;
 
 public class Word
 {
-    public List<Tile> tiles { get; private set; }
-    public Position starting { get; private set; } 
+    public List<Tile>? tiles { get; private set; }
+    public Position? starting { get; private set; }
     public bool isVertical { get; private set; }
     public Word(List<Tile> tiles, Position starting, bool vertical)
     {
@@ -19,6 +19,10 @@ public class Word
     public List<Position> GetFixPosition()
     {
         List<Position> positions = new List<Position>();
+        if (tiles == null || starting == null)
+        {
+            return positions;
+        }
         for (int i = 0; i < tiles.Count; i++)
         {
             int newX = isVertical ? starting.x : starting.x + i;
@@ -26,5 +30,25 @@ public class Word
             positions.Add(new Position(newX, newY));
         }
         return positions;
+    }
+    
+    
+    public bool IsValidWord(string word)
+    {
+        Dictionary tes = new Dictionary();
+        tes.ReadFile("Perpustakaan.txt");
+        System.Console.WriteLine("Masukan kata : ");
+        string? deInput = Console.ReadLine();
+        string de = deInput ?? string.Empty;
+        bool isValid = tes.isValidWord(de);
+        if (isValid)
+        {
+            System.Console.WriteLine("validd dah");
+        }
+        else
+        {
+            System.Console.WriteLine("salah kata");
+        }
+        return isValid;
     }
 }

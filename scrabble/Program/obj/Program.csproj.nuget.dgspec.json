@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aqsha\\OneDrive\\Documents\\scrabble\\Program\\Program.csproj": {}
+    "C:\\Users\\Aqsha\\OneDrive\\Documents\\Bootcamp\\scrabble\\Program\\Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aqsha\\OneDrive\\Documents\\scrabble\\Program\\Program.csproj": {
+    "C:\\Users\\Aqsha\\OneDrive\\Documents\\Bootcamp\\scrabble\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aqsha\\OneDrive\\Documents\\scrabble\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\Aqsha\\OneDrive\\Documents\\Bootcamp\\scrabble\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "C:\\Users\\Aqsha\\OneDrive\\Documents\\scrabble\\Program\\Program.csproj",
+        "projectPath": "C:\\Users\\Aqsha\\OneDrive\\Documents\\Bootcamp\\scrabble\\Program\\Program.csproj",
         "packagesPath": "C:\\Users\\Aqsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aqsha\\OneDrive\\Documents\\scrabble\\Program\\obj\\",
+        "outputPath": "C:\\Users\\Aqsha\\OneDrive\\Documents\\Bootcamp\\scrabble\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aqsha\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -80,7 +80,7 @@ public class Controller
         {
             if (!player.GetTiles().Contains(tile))
             {
-                Console.WriteLine($"Tile '{tile.letter}' tidak ada di rak pemain.");
+                Console.WriteLine($"Tile '{tile.letter}");
                 return;
             }
         }
@@ -92,7 +92,7 @@ public class Controller
         List<Tile> newTiles = this.DrawTiles(tiles.Count);
         player.GetTiles().AddRange(newTiles);
 
-        Console.WriteLine($"{player.GetName()} menukar {tiles.Count} ubin.");
+        Console.WriteLine($"{player.GetName()} menukar {tiles.Count} tile.");
     }
 
     public void passTurn()
@@ -120,47 +120,27 @@ public class Controller
     public void Placeword(IPlayer player, Word word)
     {
         List<Position> positions = word.GetFixPosition();
-
-        foreach (var maps in positions)
-        {
-            //Validasi batas papan
-            if (!maps)
-            
-        }
-
+        
     }
 
     public bool ValidateWordPlacement(Word word)
     {
+        var positions = word.GetFixPosition();
+        if (word.tiles == null || word.tiles.Count == 0) return false; 
+        bool isHorizontal = positions.All(p => p.y == positions[0].y);
+        bool isVertical = positions.All(p => p.x == positions[0].y);
+        if (!(isHorizontal || isVertical)) return false;
         return true;
     }
-
     public bool IsValidPlacement(Word word)
     {
-        return true;     
+        return true; 
     }
 
-    public bool IsCentered(Word word) {
-        return true;   
-    }
-
-    public bool IsValidWord(string word)
+    public bool IsCentered(Word word)
     {
-        Dictionary tes = new Dictionary();
-        tes.ReadFile("Perpustakaan.txt");
-        System.Console.WriteLine("Masukan kata : ");
-        string? deInput = Console.ReadLine();
-        string de = deInput ?? string.Empty;
-        bool isValid = tes.isValidWord(de);
-        if (isValid)
-        {
-            System.Console.WriteLine("validd dah");
-        }
-        else
-        {
-            System.Console.WriteLine("salah kata");
-        }
-        return isValid;
+        Position center = new Position(7, 7);
+        return word.GetFixPosition().Any(p => p.x == center.x && p.y == center.y);
     }
 
     public Status GetStatus()
