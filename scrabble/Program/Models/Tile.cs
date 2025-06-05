@@ -1,16 +1,21 @@
 namespace ScrabbleGame.Models;
-using ScrabbleGame.Enums;
 
 public class Tile
 {
-    public char letter { get; }
-    public int value { get; }
-    public bool isBlanktile { get; }
+    public char letter { get; set; }
+    public int value { get; set; }
+    public bool isBlanktile { get; set; }
 
-    public Tile(char l, int v, bool isBlanktilte = false)
+    public Tile(char l, int v, bool blank)
     {
-        letter = l;
-        value = v;
-        isBlanktile = isBlanktile;
+        this.letter = l;
+        this.value = v;
+        this.isBlanktile = blank;
     }
+
+    public override string ToString()
+    {
+        return $"letter: {letter}, value: {value}"; ;
+    }
+    
 }

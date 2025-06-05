@@ -1,31 +1,54 @@
-namespace ScrabbleGame.Models;
-
+namespace ScrabbleGame.Models; 
 using ScrabbleGame.Enums;
 
 public class Cell
 {
     public Tile? tile { get; set; }
-    public bool isFilled => tile != null;
-    public BonusSquareType bonus { get; set; }
-
-    public bool isHaveBonus => bonus != BonusSquareType.None;
+    public bool isFilled { get; set; }
+    public BonusSquareType Bonus { get; set; }
+    public bool isHaveBonus { get; set; }
+    public readonly bool IsCenter;
 
     public Cell()
     {
-        this.bonus = BonusSquareType.None;
+        this.tile = null;
+        this.isFilled = false;
+        this.Bonus = BonusSquareType.None;
+        this.isHaveBonus = false;
+        this.IsCenter = false;
     }
 
-    public void PlaceTile(Tile tileToPlace)
+    public void PlaceTile(Tile tile)
     {
-        if (isFilled)
+        if (tile != null)
         {
-            throw new InvalidOperationException("Cell is already filled.");
+            this.tile = tile;
+            this.isFilled = true;
         }
-        if (tileToPlace == null)
-        {
-            throw new ArgumentNullException(nameof(tileToPlace), "Tile cannot be null.");
-        }
+    }
 
-        tile = tileToPlace;
+    public string GetDisplayString()
+    {
+         if (isFilled && tile != null)
+        {
+            return "tile.letter.ToString()";
+        }
+        else
+        {
+            if (IsCenter && Bonus == BonusSquareType.DoubleWord)
+            {
+                return " *";
+            }
+
+            switch (Bonus)
+            {
+                case BonusSquareType.TripleWord: return ("3W");
+                case BonusSquareType.DoubleWord: return "2W";
+                case BonusSquareType.TripleLetter: return "3L";
+                case BonusSquareType.DoubleLetter: return "2L";
+                case BonusSquareType.None: return "  ";
+                default: return "  ";
+            }
+        }    
     }
 }

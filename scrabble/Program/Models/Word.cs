@@ -1,33 +1,30 @@
 namespace ScrabbleGame.Models;
-using ScrabbleGame.Enums;
 
 public class Word
 {
-    public List<Tile> tiles { get; set; }
-    public Position starting { get; set; }
-    public bool isVertical { get; set; }
-
+    public List<Tile> tiles { get; private set; }
+    public Position starting { get; private set; } 
+    public bool isVertical { get; private set; }
     public Word(List<Tile> tiles, Position starting, bool vertical)
     {
-        this.tiles = tiles ?? new List<Tile>();
+        if (tiles == null || tiles.Count == 0)
+        {
+            System.Console.WriteLine("Gabisa kalau cuman satu Tile");
+            return;
+        }
+        this.tiles = tiles;
         this.starting = starting;
         this.isVertical = vertical;
     }
-    public List<Position> GetFixPositions()
+    public List<Position> GetFixPosition()
     {
-        List<Position> fixPositions = new List<Position>();
-        if (tiles == null || tiles.Count == 0)
-        {
-            return fixPositions;
-        }
-
+        List<Position> positions = new List<Position>();
         for (int i = 0; i < tiles.Count; i++)
         {
-            // Use 'x' and 'y' directly from your Position class
-            int currentX = starting.x + (isVertical ? i : 0);
-            int currentY = starting.y + (isVertical ? 0 : i);
-            fixPositions.Add(new Position(currentX, currentY));
+            int newX = isVertical ? starting.x : starting.x + i;
+            int newY = isVertical ? starting.y + i : starting.y;
+            positions.Add(new Position(newX, newY));
         }
-        return fixPositions;
+        return positions;
     }
 }

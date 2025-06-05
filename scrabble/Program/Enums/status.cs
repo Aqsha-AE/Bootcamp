@@ -1,9 +1,11 @@
-namespace ScrabbleGame.Enums;
+namespace ScrabbleGame.Enums; 
 
-public enum Status
+public enum Status 
 {
-    Setup,
+    Setup, 
     GameStart,
-    GamePaused, 
-    GameCompleted,
+
+    GamePaused,
+
+    GameCompleted
 }
