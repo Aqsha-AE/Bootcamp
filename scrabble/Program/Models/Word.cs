@@ -31,24 +31,4 @@ public class Word
         }
         return positions;
     }
-    
-    
-    public bool IsValidWord(string word)
-    {
-        Dictionary tes = new Dictionary();
-        tes.ReadFile("Perpustakaan.txt");
-        System.Console.WriteLine("Masukan kata : ");
-        string? deInput = Console.ReadLine();
-        string de = deInput ?? string.Empty;
-        bool isValid = tes.isValidWord(de);
-        if (isValid)
-        {
-            System.Console.WriteLine("validd dah");
-        }
-        else
-        {
-            System.Console.WriteLine("salah kata");
-        }
-        return isValid;
-    }
 }

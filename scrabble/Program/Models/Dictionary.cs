@@ -4,11 +4,10 @@ using ScrabbleGame.Models;
 using ScrabbleGame.Enums;
 using ScrabbleGame.Interface;
 namespace ScrabbleGame.Models;
-
 public class Dictionary : IDictionary
 {
     private HashSet<string> _validwords;
-    public string perpustakaan = @"C:\ForU\scrabble\Program\bin\Debug\net9.0";
+    public string perpustakaan = @"C:\ForU\scrabble\Program\bin\Debug\net9.0\Perpustakaan.txt";
 
     public void ReadFile(string perpustakaan)
     {
@@ -20,18 +19,19 @@ public class Dictionary : IDictionary
         foreach (var line in File.ReadLines(perpustakaan))
         {
             var word = line.Trim().ToUpper();
-            if (!string.IsNullOrEmpty(line))
+            if (!string.IsNullOrEmpty(word))
             {
                 _validwords.Add(word);
             }
         }
-        System.Console.WriteLine($"Dictinory loaded : {_validwords.Count} words");
+        System.Console.WriteLine($"Dictionary loaded: {_validwords.Count} words");
     }
 
     public Dictionary()
     {
         _validwords = new HashSet<string>();
     }
+
     public bool isValidWord(string word)
     {
         return _validwords.Contains(word.ToUpper());
