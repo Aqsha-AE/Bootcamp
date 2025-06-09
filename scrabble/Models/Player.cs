@@ -5,13 +5,13 @@ namespace ScrabbleGame.Models;
 public class Player : IPlayer
 {
     private string _name;
-    private List<Tile> _tiles;
+    private List<ITile> _tiles;
     private int _score;
 
     public Player(string name)
     {
         _name = name;
-        _tiles = new List<Tile>();
+        _tiles = new List<ITile>();
         _score = 0;
     }
 
@@ -29,17 +29,17 @@ public class Player : IPlayer
     {
         _score += score;
     }
-    public void Tiles(List<Tile> tiles)
+    public void Tiles(List<ITile> tiles)
     {
         _tiles = tiles;
     }
 
-    public List<Tile> GetTiles() => _tiles;
-    public void AddTile(Tile tile) => _tiles.Add(tile);
-    public bool RemoveTile(Tile tile)
-{     Tile? tileToRemove = _tiles.FirstOrDefault(t => 
-            t.letter == tile.letter
-            && t.value == tile.value);
+    public List<ITile> GetTiles() => _tiles;
+    public void AddTile(ITile tile) => _tiles.Add(tile);
+    public bool RemoveTile(ITile tile)
+{     ITile? tileToRemove = _tiles.FirstOrDefault(t => 
+            t.Letter == tile.Letter
+            && t.Value == tile.Value);
 
         if (tileToRemove != null)
         {
@@ -51,7 +51,7 @@ public class Player : IPlayer
     {
         var random = new Random();
         _tiles = _tiles.OrderBy(t => random.Next()).ToList();
-        Console.WriteLine($"{GetName()}'s Tile sudah di acak: {string.Join(" ", _tiles.Select(t => t.letter))}");
+        Console.WriteLine($"{GetName()}'s Tile sudah di acak: {string.Join(" ", _tiles.Select(t => t.Letter))}");
     }
     
 }

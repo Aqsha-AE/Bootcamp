@@ -11,12 +11,6 @@ public class Display : IDisplay
 {
     private string _inputValue;
     public const int BoardSize = 15;
-
-    public void DiplayBoard(Controller controller)
-    {
-        controller.DisplayB();
-    }
-
     //ganti ini 
 
     public void SetMessage(string message)
@@ -66,7 +60,7 @@ public class Display : IDisplay
         }
         else
         {
-            Console.WriteLine($"{Name}'s Tile: {string.Join(" ", Tiles.Select(t => t.letter))}");
+            Console.WriteLine($"{Name}'s Tile: {string.Join(" ", Tiles.Select(t => t.Letter))}");
         }
         Console.WriteLine();
     }

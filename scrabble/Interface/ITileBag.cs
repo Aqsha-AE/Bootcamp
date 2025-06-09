@@ -5,6 +5,7 @@ public interface ITileBag
 {
     int TileSupply();
     void ShuffleTileBag();
-    Tile CheckTile();
+    ITile CheckTile();
     void ReturnTiles(Tile tile);
+    void SetTileBag(Queue<ITile> tilebag); 
 }

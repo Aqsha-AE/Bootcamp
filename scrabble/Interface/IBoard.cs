@@ -4,5 +4,4 @@ namespace ScrabbleGame.Interface;
 public interface IBoard
 {
     Cell GetCell(int x, int y);
-    void DisplayB();
 }

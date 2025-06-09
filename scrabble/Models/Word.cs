@@ -5,10 +5,10 @@ namespace ScrabbleGame.Models;
 public class Word : IWord
 {
     public string? word { get; }
-    public List<Tile>? tiles { get; private set; }
+    public List<ITile>? tiles { get; private set; }
     public Position? starting { get; private set; }
     public bool isVertical { get; private set; }
-    public Word(List<Tile> tiles, Position starting, bool vertical)
+    public Word(List<ITile> tiles, Position starting, bool vertical)
     {
         if (tiles == null || tiles.Count == 0)
         {

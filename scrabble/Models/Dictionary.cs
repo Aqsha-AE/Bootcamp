@@ -18,7 +18,7 @@ public class Dictionary : IDictionary
     {
         if (!File.Exists(filePath))
         {
-            Console.WriteLine("‼️ File tidak ditemukan.");
+            Console.WriteLine("File tidak ditemukan.");
             return;
         }
 

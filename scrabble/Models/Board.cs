@@ -13,11 +13,11 @@ public class Board : IBoard
     public Board()
     {
         _grid = new Cell[BoardSize, BoardSize];
-        InitializeBoard();
-        InitializeBonusSquares();
+        SetBoard();
+        CoordinateBonusSquares();
     }
 
-    private void InitializeBoard()
+    private void SetBoard()
     {
         for (int x = 0; x < BoardSize; x++)
         {
@@ -27,7 +27,7 @@ public class Board : IBoard
             }
         }
     }
-    private void InitializeBonusSquares() 
+    private void CoordinateBonusSquares() 
     {
         var BonusSquares = new Dictionary<BonusSquareType, int[,]>
         {
@@ -71,64 +71,5 @@ public class Board : IBoard
         }
     }
     public Cell GetCell(int x, int y) => _grid[x, y];
-    public void DisplayB() // move to display
-    {
-        Console.WriteLine("\n    00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 |");
-        Console.WriteLine("  ┌────+────+────+────+────+────+────+────+────+────+────+────+────+────+────┐");
-        for (int i = 0; i < BoardSize; i++)
-        {
-            System.Console.Write($"{i:D2}|");
-            for (int j = 0; j < BoardSize; j++)
-            {
-                if (_grid[i, j].isFilled)
-                {
-                    Console.Write($" {_grid[i, j].tile?.letter.ToString() ?? "  "} |");
-                }
-                else
-                {
-                    if (i == 7 && j == 7)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow; 
-                        Console.Write(" s  ");
-                        Console.ResetColor();
-                        Console.Write("|"); 
-                    }
-                    else
-                    {
-                        switch (_grid[i, j].Bonus)
-                    {
-                        case BonusSquareType.TripleWord:
-                            Console.BackgroundColor = ConsoleColor.Red;
-                            Console.Write(" 3W ");
-                            Console.ResetColor();
-                            Console.Write("|");
-                            break;
-                        case BonusSquareType.DoubleWord:
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.Write(" 2W |");
-                            Console.ResetColor();
-                            break;
-                        case BonusSquareType.TripleLetter:
-                            Console.BackgroundColor = ConsoleColor.Magenta;
-                            Console.Write(" 3W ");
-                            Console.ResetColor();
-                            Console.Write("|");
-                            break;
-                        case BonusSquareType.DoubleLetter:
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.Write(" 2L ");
-                            Console.ResetColor();
-                            Console.Write("|");
-                            break;
-                        default:
-                            Console.Write("    |");
-                            break;
-                    }
-                    }
-                }
-            }
-            System.Console.WriteLine();
-            System.Console.WriteLine("  └────+────+────+────+────+────+────+────+────+────+────+────+────+────+────┘");
-        }
-    }
+
 }

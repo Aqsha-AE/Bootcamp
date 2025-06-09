@@ -1,9 +1,11 @@
 namespace ScrabbleGame.Models; 
 using ScrabbleGame.Enums;
+using ScrabbleGame.Interface;
+
 
 public class Cell
 {
-    public Tile? tile { get; set; }
+    public ITile? tile { get; set; }
     public bool isFilled { get; set; }
     public BonusSquareType Bonus { get; set; }
     public bool isHaveBonus { get; set; }
@@ -15,7 +17,7 @@ public class Cell
         this.isHaveBonus = false;
     }
 
-    public void PlaceTile(Tile tile)
+    public void PlaceTile(ITile tile) 
     {
         if (tile != null)
         {
@@ -26,7 +28,7 @@ public class Cell
 
     public string GetDisplayString()
     {
-         if (isFilled && tile != null)
+        if (isFilled && tile != null)
         {
             return "tile.letter.ToString()";
         }
@@ -42,6 +44,6 @@ public class Cell
                 case BonusSquareType.None: return "  ";
                 default: return "  ";
             }
-        }    
+        }
     }
 }

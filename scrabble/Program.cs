@@ -15,6 +15,7 @@ public class Program
         ITileBag tileBag = new TileBag();
         IDictionary wordDictionary = new Dictionary(filePath);
         List<IPlayer> player = new List<IPlayer>();
+        Queue<ITile> tiles = new Queue<ITile>();
 
         //GantiAction
         Action<string> validateWord = word =>
@@ -24,7 +25,7 @@ public class Program
         };
         Action<IPlayer> turnChanged = p => Console.WriteLine($"It's now {p.GetName()}'s turn.");
 
-        Controller game = new Controller(board, display, player, tileBag, wordDictionary, validateWord, turnChanged);
+        Controller game = new Controller(board, display, player, tiles, tileBag, wordDictionary, validateWord, turnChanged);
         System.Console.WriteLine();
 
         display.DisplayBanner();
@@ -51,7 +52,7 @@ public class Program
         // Main game loop
         while (!(game.GetStatus() == Status.GameCompleted))
         {
-            display.DiplayBoard(game);
+            //display.DisplayBoard(game);
             IPlayer activePlayer = game.GetActivePlayer();
             if (activePlayer.GetTiles().Count == 0)
             {
@@ -96,18 +97,20 @@ public class Program
                     display.SetInputValue("Is the word vertical? (Y / N): ");
                     isVertical = display.GetInputValue()?.Trim().ToUpper() == "Y";
 
-                    List<Tile> tilesToPlace = new List<Tile>();
-                    List<Tile> playerTiles = activePlayer.GetTiles();
+                    List<ITile> tilesToPlace = new List<ITile>();
+                    List<ITile> playerTiles = activePlayer.GetTiles();
                     foreach (char letter in word.ToUpper())
                     {
-                        Tile? matchingTile = playerTiles.FirstOrDefault(t =>
-                            t.letter == letter);
+                        ITile? matchingTile = playerTiles.FirstOrDefault(t =>
+                            t.Letter == letter);
                         tilesToPlace.Add(matchingTile); 
                         playerTiles.Remove(matchingTile); 
                     }
 
                     IWord word1 = new Word(tilesToPlace, startPosition, isVertical);
                     game.PlaceWord(activePlayer, word1);
+                    int score = game.ApplyBonus(word1);
+                    Console.WriteLine($"{activePlayer.GetName()} mendapatkan skor {score}.");
                     game.ChangeTurn();
                     break;
                 case "2":
@@ -125,12 +128,14 @@ public class Program
                     string lettertoSwitch = display.GetInputValue().ToUpper() ?? string.Empty;
 
                     var tilesToSwitch = activePlayer.GetTiles()
-                        .Where(tile => tile != null && lettertoSwitch.Contains(tile.letter))
+                        .Where(tile => tile != null && lettertoSwitch.Contains(tile.Letter))
                         .ToList();
 
-                    if (tilesToSwitch.Count > 0)
+                    var tilesToSwitchAsITile = tilesToSwitch.Cast<ITile>().ToList();
+
+                    if (tilesToSwitchAsITile.Count > 0)
                     {
-                        game.SwitchTile(activePlayer, tilesToSwitch);
+                        game.SwitchTile(activePlayer, tilesToSwitchAsITile);
                         game.ChangeTurn();
                     }
                     else

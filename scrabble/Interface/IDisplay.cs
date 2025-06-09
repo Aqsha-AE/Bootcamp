@@ -11,7 +11,6 @@ public interface IDisplay
     string GetInfo(string text);
 
     void DisplayBanner();
-    void DiplayBoard(Controller controller);
     void DisplayTile(IPlayer player);
 
 }

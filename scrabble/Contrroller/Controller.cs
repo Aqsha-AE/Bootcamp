@@ -7,6 +7,7 @@ public class Controller
     private IBoard _board;
     private IDisplay _display;
     private List<IPlayer> _player;
+    private Queue<ITile> _tiles;
     private ITileBag _tileBag;
     private IDictionary _dictionary;
     private int _activePlayerIndeks;
@@ -14,34 +15,72 @@ public class Controller
     private Action<string> _validateWord;
     private Action<IPlayer> _turnChanged;
 
-    public Controller(IBoard board, IDisplay display, List<IPlayer> player, ITileBag tileBag, IDictionary dictionary, Action<string> validateWord, Action<IPlayer> turnChanged)
+    public Controller(IBoard board, IDisplay display, List<IPlayer> player,
+                    Queue<ITile> tiles, ITileBag tileBag, IDictionary dictionary,
+                    Action<string> validateWord, Action<IPlayer> turnChanged)
     {
         _board = board;
         _display = display;
         _player = player;
         _tileBag = tileBag;
+        _tiles = tiles;
         _dictionary = dictionary;
         _validateWord = validateWord;
         _turnChanged = turnChanged;
         _activePlayerIndeks = 0;
         _status = Status.Setup;
+
     }
     public void StartGame()
     {
         List<IPlayer> newPlayers = new List<IPlayer>();
         _player.AddRange(newPlayers);
         _status = Status.GameStart;
+        InitializeTileBag();
+        foreach (var player in _player)
+        {
+            AssignTilesToPlayer(player);
+        }
     }
     public IPlayer GetActivePlayer()
     {
         return _player[_activePlayerIndeks];
     }
-    public List<Tile> DrawTiles(int count)
+
+    public void InitializeTileBag()
     {
-        List<Tile> drawnTiles = new List<Tile>();
-        for (int i = 0; i < count; i++) 
+            _tiles.Clear();
+            _tiles = new Queue<ITile>();
+            // Membuat daftar tile standar untuk Scrabble
+            var tileDistribution = new Dictionary<char, int>
+            {
+            { 'A', 9 }, { 'B', 2 }, { 'C', 2 }, { 'D', 4 }, { 'E', 12 },
+            { 'F', 2 }, { 'G', 3 }, { 'H', 2 }, { 'I', 9 }, { 'J', 1 },
+            { 'K', 1 }, { 'L', 4 }, { 'M', 2 }, { 'N', 6 }, { 'O', 8 },
+            { 'P', 2 }, { 'Q', 1 }, { 'R', 6 }, { 'S', 4 }, { 'T', 6 },
+            { 'U', 4 }, { 'V', 2 }, { 'W', 2 }, { 'X', 1 }, { 'Y', 2 },
+            { 'Z', 1 }
+            };
+
+            foreach (var tile in tileDistribution)
+            {
+                for (int i = 0; i < tile.Value; i++)
+                {
+                    _tiles.Enqueue(new Tile(tile.Key, 1, tile.Key == ' '));
+                };
+            }
+
+            for (int i = 0; i < 2; i++) {
+               _tiles.Enqueue(new Tile(' ', 1, true));
+            }
+        _tileBag.SetTileBag(_tiles);
+        }
+    public List<ITile> DrawTiles(int count)
+    {
+        List<ITile> drawnTiles = new List<ITile>();
+        for (int i = 0; i < count; i++)
         {
-            Tile tile = _tileBag.CheckTile();
+            ITile tile = _tileBag.CheckTile();
             if (tile != null)
             {
                 drawnTiles.Add(tile);
@@ -51,13 +90,14 @@ public class Controller
     }
     public void AssignTilesToPlayer(IPlayer player)
     {
-        List<Tile> newTiles = DrawTiles(7);
+        List<ITile> newTiles = DrawTiles(7);
         foreach (var tile in newTiles)
         {
             player.AddTile(tile);
         }
     }
-    public void SwitchTile(IPlayer player, List<Tile> tiles)
+
+    public void SwitchTile(IPlayer player, List<ITile> tiles)
     {
         if (_tileBag.TileSupply() < tiles.Count)
         {
@@ -69,16 +109,16 @@ public class Controller
         {
             if (!player.GetTiles().Contains(tile))
             {
-                Console.WriteLine($"Tile '{tile.letter}");
+                Console.WriteLine($"Tile '{tile.Letter}");
                 return;
             }
         }
         foreach (var tile in tiles)
         {
-            player.RemoveTile(tile);
-            _tileBag.ReturnTiles(tile);
+            player.RemoveTile((Tile)tile);
+            _tileBag.ReturnTiles((Tile)tile);
         }
-        List<Tile> newTiles = this.DrawTiles(tiles.Count);
+        List<Tile> newTiles = this.DrawTiles(tiles.Count).Cast<Tile>().ToList();
         player.GetTiles().AddRange(newTiles);
 
         Console.WriteLine($"{player.GetName()} menukar {tiles.Count} tile.");
@@ -117,7 +157,7 @@ public class Controller
 
             if (cell.tile == null)
             {
-                Tile testing = word.tiles[i];
+                ITile testing = word.tiles[i];
                 cell.PlaceTile(testing);
                 cell.isFilled = true;
                 player.RemoveTile(testing);
@@ -126,10 +166,9 @@ public class Controller
         }
 
         int tileTodraw = 7 - player.GetTiles().Count;
-        List<Tile> newTiles = DrawTiles(tileTodraw);
+        List<Tile> newTiles = DrawTiles(tileTodraw).Cast<Tile>().ToList();
         player.GetTiles().AddRange(newTiles);
         player.AddScore(score);
-        Console.WriteLine($"{player.GetName()} mendapatkan skor {score}.");
     }
     public int ApplyBonus(IWord word)
     {
@@ -141,7 +180,7 @@ public class Controller
             var pos = positions[i];
             var cell = _board.GetCell(pos.x, pos.y);
             int tileValue = (word?.tiles != null && i >= 0 && i < word.tiles.Count &&
-            word.tiles[i] != null)? (word.tiles[i].value > 0 ? word.tiles[i].value : 1): 1; 
+            word.tiles[i] != null)? (word.tiles[i].Value > 0 ? word.tiles[i].Value : 1): 1; 
 
             if (cell.tile != null) // Tile already exists, do not apply bonus again
             {
@@ -190,7 +229,7 @@ public class Controller
         for (int i = 0; i < positions.Count; i++)
         {
             var cell = _board.GetCell(positions[i].x, positions[i].y);
-            if (cell.tile != null && word.tiles[i] != null && cell.tile.letter != word.tiles[i].letter)
+            if (cell.tile != null && word.tiles[i] != null && cell.tile.Letter != word.tiles[i].Letter)
             {
                 Console.WriteLine("Invalid placement. The word overlaps with existing tiles in an invalid way.");
                 return false;
@@ -241,7 +280,7 @@ public class Controller
         
         for (int i = 0; i < word.tiles.Count; i++)
         {
-            score += word.tiles[i].value;
+            score += word.tiles[i].Value;
         }
         return score;
     }
@@ -266,11 +305,6 @@ public class Controller
     {
         return _status;
     }
-    public void DisplayB()
-    {
-        _board.DisplayB();
-    }
-
     public void EndGame()
     {
         this._status = Status.GameCompleted;
