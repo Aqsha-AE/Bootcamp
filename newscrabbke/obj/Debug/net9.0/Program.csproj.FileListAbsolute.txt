@@ -1,0 +1,14 @@
+C:\ForU\scrabble\Program\bin\Debug\net9.0\Program.exe
+C:\ForU\scrabble\Program\bin\Debug\net9.0\Program.deps.json
+C:\ForU\scrabble\Program\bin\Debug\net9.0\Program.runtimeconfig.json
+C:\ForU\scrabble\Program\bin\Debug\net9.0\Program.dll
+C:\ForU\scrabble\Program\bin\Debug\net9.0\Program.pdb
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.AssemblyInfoInputs.cache
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.AssemblyInfo.cs
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.csproj.CoreCompileInputs.cache
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.dll
+C:\ForU\scrabble\Program\obj\Debug\net9.0\refint\Program.dll
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.pdb
+C:\ForU\scrabble\Program\obj\Debug\net9.0\Program.genruntimeconfig.cache
+C:\ForU\scrabble\Program\obj\Debug\net9.0\ref\Program.dll
