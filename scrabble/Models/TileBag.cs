@@ -12,10 +12,10 @@ namespace ScrabbleGame.Models
         public TileBag()
         {
             InitializeStandardTiles();
-            Shuffle(); 
+            ShuffleTileBag(); 
         }
 
-        public void InitializeStandardTiles()
+        public void InitializeStandardTiles() // move to gamecontroller
         {
             _tiles.Clear();
             _tiles = new Queue<Tile>();
@@ -43,12 +43,13 @@ namespace ScrabbleGame.Models
             }
         }
 
-        public Tile GetNextTile()
+        public Tile? CheckTile()
         {
             if (_tiles.Count == 0)
             {
-                throw new InvalidOperationException("TileBag kosong, tidak ada lagi tiles yang bisa diambil.");
+            return null;
             }
+            
             return _tiles.Dequeue();
         }
         public int TileSupply()
@@ -61,7 +62,7 @@ namespace ScrabbleGame.Models
             _tiles.Enqueue(tile);
         }
 
-        public void Shuffle()
+        public void ShuffleTileBag()
         {
             InitializeStandardTiles();
             var Random = new Random();

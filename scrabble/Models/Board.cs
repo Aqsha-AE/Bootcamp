@@ -27,13 +27,13 @@ public class Board : IBoard
             }
         }
     }
-    private void InitializeBonusSquares()
+    private void InitializeBonusSquares() 
     {
         var BonusSquares = new Dictionary<BonusSquareType, int[,]>
         {
             [BonusSquareType.DoubleLetter] = new int[,]
             { {3, 0}, {11, 0}, {6, 2}, {8, 2}, {0, 3},
-              { 7, 3}, {14, 3}, {2, 6}, {6, 6},{8, 6},
+              {7, 3}, {14, 3}, {2, 6}, {6, 6},{8, 6},
               {12, 6}, {3, 7}, {11, 7}, {2, 8}, {6, 8},
               {8, 8}, {12, 8}, {0, 11},{7, 11}, {14, 11},
               { 6, 12}, {8, 12}, {3, 14}, {11, 14}
@@ -71,7 +71,7 @@ public class Board : IBoard
         }
     }
     public Cell GetCell(int x, int y) => _grid[x, y];
-    public void DisplayB()
+    public void DisplayB() // move to display
     {
         Console.WriteLine("\n    00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 |");
         Console.WriteLine("  ┌────+────+────+────+────+────+────+────+────+────+────+────+────+────+────┐");

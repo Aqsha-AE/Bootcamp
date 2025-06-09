@@ -32,7 +32,7 @@ public class Dictionary : IDictionary
             }
         }
 
-        Console.WriteLine($"Kamus berhasil dimuat: {_validwords.Count} kata.");
+        //Console.WriteLine($"Kamus berhasil dimuat: {_validwords.Count} kata.");
     }
     public bool isValidWord(string word)
     {

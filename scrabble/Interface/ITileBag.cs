@@ -4,7 +4,7 @@ namespace ScrabbleGame.Interface;
 public interface ITileBag
 {
     int TileSupply();
-    void Shuffle();
-    Tile GetNextTile();
+    void ShuffleTileBag();
+    Tile CheckTile();
     void ReturnTiles(Tile tile);
 }

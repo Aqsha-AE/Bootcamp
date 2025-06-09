@@ -2,7 +2,6 @@ namespace ScrabbleGame.GameController;
 using ScrabbleGame.Enums;
 using ScrabbleGame.Interface;
 using ScrabbleGame.Models;
-
 public class Controller
 {
     private IBoard _board;
@@ -12,48 +11,27 @@ public class Controller
     private IDictionary _dictionary;
     private int _activePlayerIndeks;
     private Status _status;
-    private Func<string, bool> _ValidateWord;
-    private Action<IPlayer> _TurnChanged;
+    private Action<string> _validateWord;
+    private Action<IPlayer> _turnChanged;
 
-    public Controller(IBoard board, IDisplay display, List<IPlayer> player, ITileBag tileBag, IDictionary dictionary, Func<string, bool> validateWord, Action<IPlayer> turnChanged)
+    public Controller(IBoard board, IDisplay display, List<IPlayer> player, ITileBag tileBag, IDictionary dictionary, Action<string> validateWord, Action<IPlayer> turnChanged)
     {
         _board = board;
         _display = display;
         _player = player;
         _tileBag = tileBag;
         _dictionary = dictionary;
-        _ValidateWord = validateWord;
-        _TurnChanged = turnChanged;
+        _validateWord = validateWord;
+        _turnChanged = turnChanged;
         _activePlayerIndeks = 0;
         _status = Status.Setup;
     }
     public void StartGame()
     {
-        List<Player> newPlayers = new List<Player>();
-
-        _display.DisplayBanner();
-        string numPlayersInput = _display.GetInfo("Berapa banyak pemain yang ingin bermain?");
-        int numPlayers = int.Parse(numPlayersInput);
-        while (numPlayers < 2 || numPlayers > 4)
-        {
-            _display.SetMessage("Jumlah pemain harus antara 2 dan 4.");
-            numPlayersInput = _display.GetInfo("Masukkan jumlah pemain yang valid (2-4):");
-            numPlayers = int.Parse(numPlayersInput);
-        }
-
-        for (int i = 1; i <= numPlayers; i++)
-        {
-            string name = _display.GetInfo($"Masukkan nama pemain {i}: ");
-            newPlayers.Add(new Player(name));
-        }
-
+        List<IPlayer> newPlayers = new List<IPlayer>();
         _player.AddRange(newPlayers);
-
         _status = Status.GameStart;
-        _display.SetMessage("Permainan dimulai!");
-        _display.SetMessage(" ");
     }
-
     public IPlayer GetActivePlayer()
     {
         return _player[_activePlayerIndeks];
@@ -61,9 +39,9 @@ public class Controller
     public List<Tile> DrawTiles(int count)
     {
         List<Tile> drawnTiles = new List<Tile>();
-        for (int i = 0; i < count; i++) // Ambil sejumlah 'count' tiles
+        for (int i = 0; i < count; i++) 
         {
-            Tile tile = _tileBag.GetNextTile();
+            Tile tile = _tileBag.CheckTile();
             if (tile != null)
             {
                 drawnTiles.Add(tile);
@@ -71,7 +49,6 @@ public class Controller
         }
         return drawnTiles;
     }
-
     public void AssignTilesToPlayer(IPlayer player)
     {
         List<Tile> newTiles = DrawTiles(7);
@@ -106,7 +83,6 @@ public class Controller
 
         Console.WriteLine($"{player.GetName()} menukar {tiles.Count} tile.");
     }
-
     public void ChangeTurn()
     {
         if (_player.Count == 0)
@@ -118,23 +94,11 @@ public class Controller
         this._activePlayerIndeks = (_activePlayerIndeks + 1) % this._player.Count;
         System.Console.WriteLine($"ChangeTurn untuk : {_player[_activePlayerIndeks].GetName()}");
 
-        _TurnChanged?.Invoke(_player[_activePlayerIndeks]);
+        _turnChanged?.Invoke(_player[_activePlayerIndeks]);
     }
-    public void PassTurn(IPlayer player)
+    public void PlaceWord(IPlayer player, IWord word)
     {
-        Console.WriteLine($"{_player[_activePlayerIndeks].GetName()} melewati turn.");
-        ChangeTurn();
-    }
-
-    public bool ChallengeWord(IPlayer challenger)
-    {
-        System.Console.WriteLine($"{challenger.GetName} meminta untuk challenged the word");
-        Console.WriteLine();
-        return true;
-    }
-    public void PlaceWord(IPlayer player, Word word)
-    {
-        if (!IsValidPlacement(word))
+        if (!ValidateWordPlacement(word))
         {
             Console.WriteLine("Invalid word placement.");
             return;
@@ -154,10 +118,6 @@ public class Controller
             if (cell.tile == null)
             {
                 Tile testing = word.tiles[i];
-                if (testing != null)
-                {
-                    Console.WriteLine($"Placing tile {word.tiles[i].letter} at position ({pos.x}, {pos.y})");
-                }
                 cell.PlaceTile(testing);
                 cell.isFilled = true;
                 player.RemoveTile(testing);
@@ -171,8 +131,7 @@ public class Controller
         player.AddScore(score);
         Console.WriteLine($"{player.GetName()} mendapatkan skor {score}.");
     }
-
-    public int ApplyBonus(Word word)
+    public int ApplyBonus(IWord word)
     {
         List<Position> positions = word.GetFixPosition();
         int score = 0;
@@ -181,9 +140,8 @@ public class Controller
         {
             var pos = positions[i];
             var cell = _board.GetCell(pos.x, pos.y);
-            int tileValue = (word?.tiles != null && i >= 0 && i < word.tiles.Count && word.tiles[i] != null)
-    ? (word.tiles[i].value > 0 ? word.tiles[i].value : 1)
-    : 1; 
+            int tileValue = (word?.tiles != null && i >= 0 && i < word.tiles.Count &&
+            word.tiles[i] != null)? (word.tiles[i].value > 0 ? word.tiles[i].value : 1): 1; 
 
             if (cell.tile != null) // Tile already exists, do not apply bonus again
             {
@@ -213,7 +171,7 @@ public class Controller
         }
         return score * wordMultiplier;
     }
-    public bool ValidateWordPlacement(Word word)
+    public bool ValidateWordPlacement(IWord word)
     {
         List<Position> positions = word.GetFixPosition();
         // Validasi dasar
@@ -272,17 +230,11 @@ public class Controller
         }
         return true;
     }
-    public bool IsValidPlacement(Word word)
-    {
-        return ValidateWordPlacement(word);
-    }
-
-    public bool IsCentered(Word word)
+    public bool IsCentered(IWord word)
     {    
         return word.GetFixPosition().Any(pos => pos.x == 7 && pos.y == 7);
     }
-
-    public int CalculateWordScore(Word word)
+    public int CalculateWordScore(IWord word)
     {
         int score = 0;
         List<Position> positions = word.GetFixPosition();
@@ -293,7 +245,6 @@ public class Controller
         }
         return score;
     }
-
     public int CalculateFinalScore()
     {
         int totalScore = 0;
@@ -326,18 +277,18 @@ public class Controller
         Console.WriteLine("Permainan selesai!");
     }
 
-    public IPlayer? GameWinner()
+    public (IPlayer? Winner, GameResult Result) Winner()
     {
-        var maxScore = _activePlayerIndeks = _player.Max(p => p.GetScore());
-        if (maxScore > 1 && _player.Count > 0)
-        {
-            return _player.FirstOrDefault(p => p.GetScore() == maxScore);
-        }
+        if (_player == null || _player.Count == 0)
+            return (null, GameResult.NoWinner);
+
+        int maxScore = _player.Max(p => p.GetScore());
+        var winners = _player.Where(p => p.GetScore() == maxScore).ToList();
+
+        if (winners.Count == 1)
+            return (winners[0], GameResult.WinnerFound);
         else
-        {
-            Console.WriteLine("Tidak ada pemenang, semua pemain memiliki skor yang sama.");
-            return null;
-        }  
+            return (null, GameResult.NoWinner);
     }
 }
 

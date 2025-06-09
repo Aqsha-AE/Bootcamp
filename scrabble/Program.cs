@@ -16,13 +16,36 @@ public class Program
         IDictionary wordDictionary = new Dictionary(filePath);
         List<IPlayer> player = new List<IPlayer>();
 
-        Func<string, bool> validateWord = word => wordDictionary.isValidWord(word);
+        //GantiAction
+        Action<string> validateWord = word =>
+        {
+            bool isValid = wordDictionary.isValidWord(word);
+            Console.WriteLine($"Kata '{word}' valid? {isValid}");
+        };
         Action<IPlayer> turnChanged = p => Console.WriteLine($"It's now {p.GetName()}'s turn.");
 
         Controller game = new Controller(board, display, player, tileBag, wordDictionary, validateWord, turnChanged);
         System.Console.WriteLine();
 
+        display.DisplayBanner();
+        string numPlayersInput = display.GetInfo("Berapa banyak pemain yang ingin bermain?");
+        int numPlayers = int.Parse(numPlayersInput);
+        while (numPlayers < 2 || numPlayers > 4)
+        {
+            display.SetMessage("Jumlah pemain harus antara 2 dan 4.");
+            numPlayersInput = display.GetInfo("Masukkan jumlah pemain yang valid (2-4):");
+            numPlayers = int.Parse(numPlayersInput);
+        }
+
+        for (int i = 1; i <= numPlayers; i++)
+        {
+            string name = display.GetInfo($"Masukkan nama pemain {i}: ");
+            player.Add(new Player(name));
+        }
         game.StartGame();
+
+        display.SetMessage("Permainan dimulai!");
+        display.SetMessage(" ");
         bool isVertical = true;
 
         // Main game loop
@@ -79,17 +102,18 @@ public class Program
                     {
                         Tile? matchingTile = playerTiles.FirstOrDefault(t =>
                             t.letter == letter);
-                        tilesToPlace.Add(matchingTile); // Assuming 0 as the default value for the 'int' parameter
-                        playerTiles.Remove(matchingTile); // Remove the tile from the player's rack
+                        tilesToPlace.Add(matchingTile); 
+                        playerTiles.Remove(matchingTile); 
                     }
 
-                    Word word1 = new Word(tilesToPlace, startPosition, isVertical);
+                    IWord word1 = new Word(tilesToPlace, startPosition, isVertical);
                     game.PlaceWord(activePlayer, word1);
                     game.ChangeTurn();
                     break;
                 case "2":
                     display.SetMessage("Passing turn...");
-                    game.PassTurn(activePlayer);
+                    Console.WriteLine($"{activePlayer.GetName()} melewati turn.");
+                    game.ChangeTurn();
                     break;
                 case "3":
                     display.SetMessage("Shuffling tile...");
@@ -107,7 +131,7 @@ public class Program
                     if (tilesToSwitch.Count > 0)
                     {
                         game.SwitchTile(activePlayer, tilesToSwitch);
-                        game.PassTurn(activePlayer);
+                        game.ChangeTurn();
                     }
                     else
                     {
@@ -129,7 +153,7 @@ public class Program
         }
         display.SetMessage("\nGame Over! Thank you for playing.");
         game.CalculateFinalScore();
-        IPlayer? winner = game.GameWinner();
+        var (winner, result) = game.Winner();
         display.SetMessage($"The winner is: {winner?.GetName()} with a score of {winner?.GetScore()}");
         display.SetMessage("Press any key to exit...");
         Console.ReadKey();

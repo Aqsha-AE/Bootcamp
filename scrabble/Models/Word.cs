@@ -1,6 +1,8 @@
+using ScrabbleGame.Interface;
+
 namespace ScrabbleGame.Models;
 
-public class Word
+public class Word : IWord
 {
     public string? word { get; }
     public List<Tile>? tiles { get; private set; }

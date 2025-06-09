@@ -17,6 +17,8 @@ public class Display : IDisplay
         controller.DisplayB();
     }
 
+    //ganti ini 
+
     public void SetMessage(string message)
     {
         Console.WriteLine(message);
