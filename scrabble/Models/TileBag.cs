@@ -14,11 +14,15 @@ namespace ScrabbleGame.Models
         {
             _tiles.Clear();
             _tiles = new Queue<ITile>();
-            ShuffleTileBag(); 
         }
 
         public void SetTileBag(Queue<ITile> tilebag) {
             _tiles = tilebag;
+        }
+
+        public Queue<ITile> GetTilebag()
+        {
+            return _tiles;
         }
         public ITile CheckTile()
         {
@@ -40,20 +44,6 @@ namespace ScrabbleGame.Models
             _tiles.Enqueue(tile);
         }
 
-        public void ShuffleTileBag()
-        {
-            var Random = new Random();
-            var tileList = _tiles.ToList();
-            for (int i = tileList.Count - 1; i > 0; i--)
-            {
-                int j = Random.Next(0, i + 1);
-                var temp = tileList[i];
-                tileList[i] = tileList[j];
-                tileList[j] = temp;
-            }
-
-            _tiles = new Queue<ITile>(tileList);
-        }
     }
 }
 

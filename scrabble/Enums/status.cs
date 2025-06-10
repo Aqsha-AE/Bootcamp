@@ -1,5 +1,4 @@
 namespace ScrabbleGame.Enums; 
-
 public enum Status 
 {
     Setup, 

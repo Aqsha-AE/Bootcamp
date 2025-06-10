@@ -17,7 +17,7 @@ public class Cell
         this.isHaveBonus = false;
     }
 
-    public void PlaceTile(ITile tile) 
+    public void CellTile(ITile tile) 
     {
         if (tile != null)
         {

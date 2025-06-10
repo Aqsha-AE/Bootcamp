@@ -37,6 +37,7 @@ public class Controller
         _player.AddRange(newPlayers);
         _status = Status.GameStart;
         InitializeTileBag();
+        ShuffleTileBag();
         foreach (var player in _player)
         {
             AssignTilesToPlayer(player);
@@ -49,8 +50,9 @@ public class Controller
 
     public void InitializeTileBag()
     {
-            _tiles.Clear();
-            _tiles = new Queue<ITile>();
+        Queue<ITile> tileBag = _tileBag.GetTilebag();
+            tileBag.Clear();
+            tileBag = new Queue<ITile>();
             // Membuat daftar tile standar untuk Scrabble
             var tileDistribution = new Dictionary<char, int>
             {
@@ -66,14 +68,30 @@ public class Controller
             {
                 for (int i = 0; i < tile.Value; i++)
                 {
-                    _tiles.Enqueue(new Tile(tile.Key, 1, tile.Key == ' '));
+                    tileBag.Enqueue(new Tile(tile.Key, 1, tile.Key == ' '));
                 };
             }
 
             for (int i = 0; i < 2; i++) {
-               _tiles.Enqueue(new Tile(' ', 1, true));
+               tileBag.Enqueue(new Tile(' ', 1, true));
             }
-        _tileBag.SetTileBag(_tiles);
+            _tileBag.SetTileBag(tileBag);
+        }
+
+        public void ShuffleTileBag()
+        {
+            InitializeTileBag();
+            var Random = new Random();
+            var tileList = _tileBag.GetTilebag().ToList();
+            for (int i = tileList.Count - 1; i > 0; i--)
+            {
+                int j = Random.Next(0, i + 1);
+                var temp = tileList[i];
+                tileList[i] = tileList[j];
+                tileList[j] = temp;
+            }
+
+             _tileBag.SetTileBag(new Queue<ITile>(tileList));
         }
     public List<ITile> DrawTiles(int count)
     {
@@ -96,7 +114,6 @@ public class Controller
             player.AddTile(tile);
         }
     }
-
     public void SwitchTile(IPlayer player, List<ITile> tiles)
     {
         if (_tileBag.TileSupply() < tiles.Count)
@@ -125,22 +142,13 @@ public class Controller
     }
     public void ChangeTurn()
     {
-        if (_player.Count == 0)
-        {
-            Console.WriteLine("Tidak ada player yang avalaible untuk changeTurn");
-            return;
-        }
-
         this._activePlayerIndeks = (_activePlayerIndeks + 1) % this._player.Count;
-        System.Console.WriteLine($"ChangeTurn untuk : {_player[_activePlayerIndeks].GetName()}");
-
         _turnChanged?.Invoke(_player[_activePlayerIndeks]);
     }
     public void PlaceWord(IPlayer player, IWord word)
     {
-        if (!ValidateWordPlacement(word))
+        if (ValidateWordPlacement(word) != validateResult.Success)
         {
-            Console.WriteLine("Invalid word placement.");
             return;
         }
 
@@ -158,10 +166,10 @@ public class Controller
             if (cell.tile == null)
             {
                 ITile testing = word.tiles[i];
-                cell.PlaceTile(testing);
+                cell.CellTile(testing);
                 cell.isFilled = true;
                 player.RemoveTile(testing);
-                tilesPlaced++; 
+                tilesPlaced++;
             }
         }
 
@@ -210,20 +218,19 @@ public class Controller
         }
         return score * wordMultiplier;
     }
-    public bool ValidateWordPlacement(IWord word)
+    public validateResult ValidateWordPlacement(IWord word)
     {
         List<Position> positions = word.GetFixPosition();
         // Validasi dasar
         if (word.tiles == null || positions.Count == 0 || positions.Count != word.tiles.Count)
         {
-            Console.WriteLine("Invalid word: no tiles or invalid positions");
-            return false;
+            return validateResult.InvalidWord;
         }
 
         // cek apakah posisi horizontal atau vertical
         bool isHorizontal = positions.All(p => p.y == positions[0].y);
         bool isVertical = positions.All(p => p.x == positions[0].x);
-        if (!(isHorizontal || isVertical)) return false;
+        if (!(isHorizontal || isVertical)) return validateResult.NotAligned;
 
         //cek overlap dengan tile yang sudah ada
         for (int i = 0; i < positions.Count; i++)
@@ -231,8 +238,7 @@ public class Controller
             var cell = _board.GetCell(positions[i].x, positions[i].y);
             if (cell.tile != null && word.tiles[i] != null && cell.tile.Letter != word.tiles[i].Letter)
             {
-                Console.WriteLine("Invalid placement. The word overlaps with existing tiles in an invalid way.");
-                return false;
+             return validateResult.InvalidOverlap;
             }
         }
 
@@ -241,8 +247,7 @@ public class Controller
         {
             if (!IsCentered(word))
             {
-                Console.WriteLine("First word must be placed in the center of the board.");
-                return false;
+                return validateResult.FirstWordNotCentered;
             }
         }
         else if (_status == Status.GameInProgress)
@@ -263,11 +268,10 @@ public class Controller
 
             if (!connected)
             {
-                Console.WriteLine("Kata harus terhubung dengan kata yang sudah ada di board.");
-                return false;
+                return validateResult.NotConnected;
             }
         }
-        return true;
+        return validateResult.Success;
     }
     public bool IsCentered(IWord word)
     {    
@@ -311,18 +315,13 @@ public class Controller
         Console.WriteLine("Permainan selesai!");
     }
 
-    public (IPlayer? Winner, GameResult Result) Winner()
+    public List<IPlayer> GetWinner()
     {
         if (_player == null || _player.Count == 0)
-            return (null, GameResult.NoWinner);
+            return new List<IPlayer>();
 
         int maxScore = _player.Max(p => p.GetScore());
-        var winners = _player.Where(p => p.GetScore() == maxScore).ToList();
-
-        if (winners.Count == 1)
-            return (winners[0], GameResult.WinnerFound);
-        else
-            return (null, GameResult.NoWinner);
+       return _player.Where(p => p.GetScore() == maxScore).ToList();
     }
 }
 

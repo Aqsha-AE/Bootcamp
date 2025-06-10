@@ -52,22 +52,14 @@ public class Program
         // Main game loop
         while (!(game.GetStatus() == Status.GameCompleted))
         {
-            //display.DisplayBoard(game);
+            display.DisplayBoard(board);
             IPlayer activePlayer = game.GetActivePlayer();
             if (activePlayer.GetTiles().Count == 0)
             {
                 game.AssignTilesToPlayer(activePlayer);
             }
             display.DisplayTile(activePlayer);
-
-            display.SetMessage("Choose an action:");
-            display.SetMessage("1. Place a word");
-            display.SetMessage("2. Pass Turn");
-            display.SetMessage("3. Shuffle Rack");
-            display.SetMessage("4. Switch Tiles");
-            display.SetMessage("5. View Score");
-            display.SetMessage("6. End Game");
-
+            display.DisplayMenu();
             display.SetInputValue("Please enter your choice (1-6):");
             string choice = display.GetInputValue() ?? string.Empty;
             display.SetMessage($"You chose: {choice}");
@@ -108,14 +100,22 @@ public class Program
                     }
 
                     IWord word1 = new Word(tilesToPlace, startPosition, isVertical);
-                    game.PlaceWord(activePlayer, word1);
+                    validateResult result = game.ValidateWordPlacement(word1);
+                    if (result == validateResult.Success)
+                    {
+                        game.PlaceWord(activePlayer, word1);
+                        game.ChangeTurn();
+                    }
+                    else
+                    {
+                        display.DisplayPlacementError(result);
+                    }
                     int score = game.ApplyBonus(word1);
-                    Console.WriteLine($"{activePlayer.GetName()} mendapatkan skor {score}.");
-                    game.ChangeTurn();
+                    display.SetMessage($"{activePlayer.GetName()} mendapatkan skor {score}.");
                     break;
                 case "2":
                     display.SetMessage("Passing turn...");
-                    Console.WriteLine($"{activePlayer.GetName()} melewati turn.");
+                    display.SetMessage($"{activePlayer.GetName()} melewati turn.");
                     game.ChangeTurn();
                     break;
                 case "3":
@@ -158,8 +158,27 @@ public class Program
         }
         display.SetMessage("\nGame Over! Thank you for playing.");
         game.CalculateFinalScore();
-        var (winner, result) = game.Winner();
-        display.SetMessage($"The winner is: {winner?.GetName()} with a score of {winner?.GetScore()}");
+        List<IPlayer> winners = game.GetWinner();
+        if (winners != null && winners.Count > 0)
+        {
+            if (winners.Count == 1)
+            {
+            var winner = winners[0];
+            display.SetMessage($"The winner is: {winner.GetName()} with a score of {winner.GetScore()}");
+            }
+            else
+            {
+            display.SetMessage("It's a tie between:");
+            foreach (var winner in winners)
+            {
+                display.SetMessage($"{winner.GetName()} with a score of {winner.GetScore()}");
+            }
+            }
+        }
+        else
+        {
+            display.SetMessage("No winner could be determined.");
+        }
         display.SetMessage("Press any key to exit...");
         Console.ReadKey();
     }

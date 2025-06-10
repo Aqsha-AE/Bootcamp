@@ -71,5 +71,4 @@ public class Board : IBoard
         }
     }
     public Cell GetCell(int x, int y) => _grid[x, y];
-
 }
