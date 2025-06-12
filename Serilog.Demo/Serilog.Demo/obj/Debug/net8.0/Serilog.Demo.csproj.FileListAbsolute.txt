@@ -1,0 +1,8 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.csproj.AssemblyReference.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Serilog.Demo\Serilog.Demo\obj\Debug\net8.0\Serilog.Demo.sourcelink.json
