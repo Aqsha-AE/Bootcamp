@@ -1,0 +1,64 @@
+@model IEnumerable<BookManagementSystem.Models.Book>
+
+@{
+    ViewData["Title"] = "Daftar Buku";
+}
+
+<h1>Daftar Buku</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tambah Buku Baru</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Judul</th>
+            <th>Penulis</th>
+            <th>Tanggal Terbit</th>
+            <th>Genre</th>
+            <th>Stok</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @item.PublishedDate.ToString("dd-MM-yyyy")
+            </td>
+            <td>
+                @if (item.BookGenres != null)
+                {
+                    foreach (var genre in item.BookGenres)
+                    {
+                        <span class="badge bg-secondary">@genre.Genre.Name</span>
+                    }
+                }
+            </td>
+            <td>
+                @if (item.Stocks != null)
+                {
+                    var totalStock = item.Stocks.Sum(s => s.Quantity);
+                    <span>@totalStock item</span>
+                }
+                else
+                {
+                    <span>0 item</span>
+                }
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
