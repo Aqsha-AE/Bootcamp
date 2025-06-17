@@ -1,0 +1,28 @@
+@using MovieManagement.DTOs
+@model MovieManagement.DTOs.MovieCreateDTO
+@{
+    ViewData["Title"] = "Tambah Film Baru";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Title">Judul</label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="ReleaseYear">Tahun Rilis</label>
+        <input asp-for="ReleaseYear" class="form-control">
+        <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+    </div>
+    <div class="form-group"></div>
+        <label>Genre</label>
+        <input type="text" name="Genres" class="form-control" placeholder="Contoh: Action, Drama, Comedy">
+    </div>
+    
+    <button type="submit" class="btn btn-success">Simpan</button>
+    <a asp-action="Index" class="btn btn-secondary">Batal</a>
+</form>
