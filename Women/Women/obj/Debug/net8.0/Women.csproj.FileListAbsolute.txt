@@ -1,0 +1,15 @@
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\bin\Debug\net8.0\Women.exe
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\bin\Debug\net8.0\Women.deps.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\bin\Debug\net8.0\Women.runtimeconfig.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\bin\Debug\net8.0\Women.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\bin\Debug\net8.0\Women.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.AssemblyInfoInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.AssemblyInfo.cs
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.csproj.CoreCompileInputs.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.sourcelink.json
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\refint\Women.dll
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.pdb
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\Women.genruntimeconfig.cache
+C:\Users\Aqsha\OneDrive\Documents\Bootcamp\Women\Women\obj\Debug\net8.0\ref\Women.dll
